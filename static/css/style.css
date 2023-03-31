@@ -1,0 +1,60 @@
+.container {
+            float: right;
+            padding: 1px;
+            border: 1px #FFFFFF;
+            
+        }
+img {
+    float: right;
+}
+.p1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #873260;
+    float: left;
+    font-size: 12px;
+    font-weight: 40;
+}
+.p2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #9866C7;
+    font-size: 15px;
+    font-weight: 200;
+}
+.p3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #9866C7;
+    font-size: 40px;
+    font-weight: bold;
+}
+.credits {
+    color: #000000;
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    float: left;
+}
+.p4 {
+    font-family: Verdana;
+    font-size: 40px;
+    font-weight: bold;
+}
+body {
+    background-color: #c7d9fe;
+}
+table {
+    float: left;
+}
+.form-inline {
+        margin: auto;
+        width: 1000px;
+        padding: 50px;
+     }
+
+.form-group {
+    margin: auto;
+  }
+
+.jumbotron {
+    text-align: center;
+    height: 50px;
+    background-image: linear-gradient(to bottom, #87ceeb, #c7d9fe);
+}

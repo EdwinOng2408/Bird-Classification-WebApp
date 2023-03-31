@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ornithological fauna recognition Start Page</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='app_images/favicon_2.ico')}}">
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+    
+<body>
+    <a href='/uploading'><p class="p3" font-size="40px"><u>Click here to start identifying your birds</u></p></a>
+    <a href='/history'><p class="p3" font-size="40px"><u>Click here to see your prediction history</u></p></a>
+    <div class="container">
+        <div class="row">
+            <img src="{{url_for('static', filename='app_images/profile.jpg')}}" width="750px" height="750px"/>
+        </div>
+        <div class="row">
+            <p class="credits">Great Egret image courtesy of Pixabay</p>
+        </div>
+    </div>
+    <br>
+    <table>
+        <th><p class='p2'>Birds recognized by the app (click the names to find out more):</p></th>
+        {% for bird in birds %}
+        <tr>
+            <td>
+                <a href= "{{ bird.link }}"><p class="p1">{{ bird.name }}</p></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

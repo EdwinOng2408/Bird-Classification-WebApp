@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ornithological Fauna Recognition History</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='app_images/favicon_2.ico') }}">
+        <style>
+            .container {
+                height: 60px;
+                text-align: center;
+                background-image: linear-gradient(to bottom, #c7d9fe, #cdf0ff);
+            }
+
+            body {
+                background-color: #cdf0ff;
+            }
+
+            table {
+                border: 1px bold #dddddd;
+                background-color: #cdf0ff;
+                text-align: center;
+            }
+
+            .p1 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-color: #9866C7;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            .p2 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-color: #000000;
+                font-size: 12px;
+            }
+
+            .head1 {
+                font-size: 45px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="head1">Your recognition history</h1>
+        </div>
+        <table>
+            <thead>
+                <th class="p1">Prediction</th>
+                <th class="p1">Image</th>
+            </thead>
+            <tbody>
+                {% for pred in records %}
+                <tr>
+                    <td><p class="p2">{{ pred.pred }}</p></td>
+                    <td><img src="{{ pred.img }}" alt="{{ pred.pred }}" width=100px height=100px</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

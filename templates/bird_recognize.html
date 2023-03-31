@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ornithological Fauna Recognition</title>
+    <link
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='app_images/favicon_2.ico')}}">
+
+
+  <body>
+    <div class="jumbotron">
+      <h2 class="p4">Upload the bird image here and click on Recognize.</h2>
+      <br>
+    </div>
+    <div class="form-inline">
+      <p class="p3">Upload bird image.</p>
+      <p class="p2">
+        Choose file, Submit, Recognize.
+      </p>
+      <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input class="form-control" type="file" name="img" multiple />
+        <input class="btn btn-primary" type="submit" />
+      </form>
+        <br>
+        <div class="form-group">
+            <form action="/predict">
+            <input class="btn btn-primary" type="submit" class="sub" value="Recognize" />
+            </form>
+        </div>
+        <br><br>
+        <a href="/"><p class="credits">Click here to return to start page</p></a>
+    </div>
+    </body>
+</html>
